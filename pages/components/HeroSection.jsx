@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-black text-white relative overflow-hidden">
+    <section id = "hero" className="min-h-screen flex items-center justify-center bg-black text-white relative overflow-hidden">
       {/* Background Animation */}
       <motion.div
         className="absolute inset-0"

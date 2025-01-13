@@ -45,7 +45,7 @@ const EmailSection = () => {
           Contact Me
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12"> {/* Increased gap to gap-12 (48px) */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -56,13 +56,13 @@ const EmailSection = () => {
               I’m actively exploring new opportunities and would love to connect! Feel free to reach out—whether you have a question, a collaboration idea, or just want to say hello. I’ll do my best to get back to you promptly!
             </p>
             <div className="flex gap-4">
-              <Link href="https://github.com/iShinzoo" className="text-gray-400 hover:text-white transition-all duration-300">
+              <Link href="https://github.com/iShinzoo" target = "_blank" className="text-gray-400 hover:text-white transition-all duration-300">
                 <GithubIcon className="w-6 h-6" />
               </Link>
-              <Link href="https://www.linkedin.com/in/krishnathakur1/" className="text-gray-400 hover:text-white transition-all duration-300">
+              <Link href="https://www.linkedin.com/in/krishnathakur1/" target = "_blank" className="text-gray-400 hover:text-white transition-all duration-300">
                 <LinkedinIcon className="w-6 h-6" />
               </Link>
-              <Link href="https://x.com/i_krsna4" className="text-gray-400 hover:text-white transition-all duration-300">
+              <Link href="https://x.com/i_krsna4" target = "_blank" className="text-gray-400 hover:text-white transition-all duration-300">
                 <XIcon className="w-6 h-6" />
               </Link>
             </div>
