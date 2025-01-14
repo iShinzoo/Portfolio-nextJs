@@ -68,6 +68,15 @@ const projectsData = [
     gitUrl: "https://github.com/iShinzoo/CryDapeSVG",
     previewUrl: "https://crydapesvgnfts.vercel.app/",
   },
+  {
+    id: 8,
+    title: "Doctor App Ui",
+    description: "UI for a doctor appointment booking app",
+    image: "/images/projects/6.png",
+    tag: ["All", "Mobile"],
+    gitUrl: "https://github.com/iShinzoo/DoctorAppUI",
+    previewUrl: "/",
+  },
 ];
 
 const ProjectsSection = () => {
