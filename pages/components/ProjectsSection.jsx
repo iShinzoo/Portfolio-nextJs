@@ -12,7 +12,7 @@ const projectsData = [
     image: "/images/projects/TripMock.png",
     tag: ["All", "Mobile"],
     gitUrl: "https://github.com/iShinzoo/TripDrop",
-    previewUrl: "/",
+    previewUrl: "https://github.com/iShinzoo/TripDrop",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const projectsData = [
     image: "/images/projects/ChatMock.png",
     tag: ["All", "Mobile"],
     gitUrl: "https://github.com/iShinzoo/ChattingApp",
-    previewUrl: "/",
+    previewUrl: "https://github.com/iShinzoo/ChattingApp/releases/tag/v1.0",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const projectsData = [
     image: "/images/projects/tgMock.png",
     tag: ["All", "Mobile"],
     gitUrl: "https://github.com/iShinzoo/TranscribeGenius",
-    previewUrl: "/",
+    previewUrl: "https://github.com/iShinzoo/TranscribeGenius/releases/tag/v1.0",
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const projectsData = [
     image: "/images/projects/NewMock.png",
     tag: ["All", "Mobile"],
     gitUrl: "https://github.com/iShinzoo/NewsNow_app",
-    previewUrl: "/",
+    previewUrl: "https://github.com/iShinzoo/NewsNow_app/releases/tag/V1.0",
   },
   {
     id: 5,
@@ -48,7 +48,7 @@ const projectsData = [
     image: "/images/projects/5.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/iShinzoo/SongRecommendation",
-    previewUrl: "/",
+    previewUrl: "https://github.com/iShinzoo/SongRecommendation",
   },
   {
     id: 6,
@@ -57,7 +57,7 @@ const projectsData = [
     image: "/images/projects/SmMock.png",
     tag: ["All", "Web3"],
     gitUrl: "https://github.com/iShinzoo/SmartContracts",
-    previewUrl: "/",
+    previewUrl: "https://github.com/iShinzoo/SmartContracts",
   },
   {
     id: 7,
@@ -67,6 +67,15 @@ const projectsData = [
     tag: ["All", "Web3"],
     gitUrl: "https://github.com/iShinzoo/CryDapeSVG",
     previewUrl: "https://crydapesvgnfts.vercel.app/",
+  },
+  {
+    id: 8,
+    title: "MusicNFT Minting",
+    description: "MusicBlock is an ERC-721 compliant NFT smart contract built using Solidity.",
+    image: "/images/projects/SmMock.png",
+    tag: ["All", "Web3"],
+    gitUrl: "https://github.com/iShinzoo/Music-NFT",
+    previewUrl: "https://github.com/iShinzoo/Music-NFT",
   }
 ];
 

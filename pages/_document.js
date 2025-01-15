@@ -4,6 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <title>KRISHNA THAKUR</title>
+      <link rel="icon" href="/images/projects/logo.png" />
       <Head />
       <body className="antialiased">
         <Main />
