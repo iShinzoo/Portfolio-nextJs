@@ -90,6 +90,10 @@ const ProjectsSection = () => {
     project.tag.includes(tag)
   );
 
+  if (filteredProjects.length === 0) {
+    return <div>No projects found for the selected tag.</div>;
+  }
+
   return (
     <section className="min-h-screen bg-black text-white py-20 relative overflow-hidden" id="projects">
       <div className="max-w-6xl mx-auto px-4">
