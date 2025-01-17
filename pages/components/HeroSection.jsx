@@ -2,25 +2,28 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 const HeroSection = () => {
-  return (
-    <section id = "hero" className="min-h-screen flex items-center justify-center bg-black text-white relative overflow-hidden">
-      {/* Background Animation */}
-      <motion.div
-        className="absolute inset-0"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      />
+  const handleDownloadCV = () => {
+    window.open("https://drive.google.com/uc?export=download&id=1sS_dGZHpSFMzhBBGl6zQKj92inTnS7rA", "_blank");
+  };
 
-      <div className="max-w-4xl mx-auto px-4 text-center">
+  const handleSocialClick = (e) => {
+    e.preventDefault();
+    const contactSection = document.querySelector("#contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return (
+    <section className="min-h-screen w-full flex items-center justify-center bg-black text-white">
+      <div className="w-full max-w-4xl mx-auto px-4 py-8 relative z-10 flex flex-col items-center">
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
+          className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-center"
         >
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
             Hello, I&apos;m
@@ -45,7 +48,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-gray-400 text-lg md:text-xl mb-8"
+          className="text-gray-400 text-lg md:text-xl mb-8 text-center"
         >
           Android & Blockchain Developer, Tech Enthusiast Building Future Innovations.
         </motion.p>
@@ -54,20 +57,20 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="flex flex-col md:flex-row gap-4 justify-center"
+          className="flex flex-col md:flex-row gap-4 justify-center items-center"
         >
-          <Link
-            href="/#contact"
-            className="px-6 py-3 rounded-lg bg-purple-600 hover:bg-purple-700 text-white transition-all duration-300"
+          <button
+            onClick={handleSocialClick}
+            className="w-full md:w-auto inline-block px-8 py-4 rounded-lg bg-purple-600 hover:bg-purple-700 text-white transition-all duration-300 cursor-pointer"
           >
             Socials
-          </Link>
-          <Link
-            href="/"
-            className="px-6 py-3 rounded-lg bg-gray-800 hover:bg-gray-700 text-white transition-all duration-300"
+          </button>
+          <button
+            onClick={handleDownloadCV}
+            className="w-full md:w-auto inline-block px-8 py-4 rounded-lg bg-gray-800 hover:bg-gray-700 text-white transition-all duration-300 cursor-pointer"
           >
             Download CV
-          </Link>
+          </button>
         </motion.div>
       </div>
     </section>
