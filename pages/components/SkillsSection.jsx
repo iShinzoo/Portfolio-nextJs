@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaReact, FaJava, FaPython, FaJs, FaHtml5, FaCss3Alt, FaGit, FaGithub, FaNodeJs } from "react-icons/fa";
-import { SiKotlin, SiSolidity, SiFirebase, SiSupabase, SiMysql, SiAndroidstudio, SiPostman, SiRemix } from "react-icons/si";
+import { FaReact, FaJava, FaJs, FaHtml5, FaCss3Alt, FaGit, FaGithub, FaNodeJs, FaHardHat, FaNotEqual } from "react-icons/fa";
+import { SiKotlin, SiSolidity, SiFirebase, SiMysql, SiAndroidstudio, SiPostman, SiRemix, SiClockify, SiJetpackcompose, SiXml } from "react-icons/si";
 
 const SKILLS_DATA = [
   {
@@ -13,7 +13,6 @@ const SKILLS_DATA = [
       { name: "HTML", icon: <FaHtml5 className="w-12 h-12 text-orange-500" /> },
       { name: "CSS", icon: <FaCss3Alt className="w-12 h-12 text-blue-500" /> },
       { name: "Java", icon: <FaJava className="w-12 h-12 text-red-500" /> },
-      { name: "Python", icon: <FaPython className="w-12 h-12 text-yellow-500" /> },
       { name: "JavaScript", icon: <FaJs className="w-12 h-12 text-yellow-400" /> },
     ],
   },
@@ -22,6 +21,8 @@ const SKILLS_DATA = [
     items: [
       { name: "React Js", icon: <FaReact className="w-12 h-12 text-blue-500" /> },
       { name: "Node Js", icon: <FaNodeJs className="w-12 h-12 text-green-500" /> },
+      { name: "Jetpack Compose", icon: <SiJetpackcompose className="w-12 h-12 text-blue-500" /> },
+      { name: "XML", icon: <SiXml className="w-12 h-12 text-green-500" /> },
     ],
   },
   {
@@ -35,6 +36,7 @@ const SKILLS_DATA = [
       { name: "Android Studio", icon: <SiAndroidstudio className="w-12 h-12 text-green-500" /> },
       { name: "Postman", icon: <SiPostman className="w-12 h-12 text-orange-500" /> },
       { name: "Remix IDE", icon: <SiRemix className="w-12 h-12 text-blue-400" /> },
+      { name: "Hardhat", icon: <FaHardHat className="w-12 h-12 text-green-500" /> },
     ],
   },
 ];

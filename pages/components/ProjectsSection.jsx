@@ -63,7 +63,7 @@ const projectsData = [
     id: 7,
     title: "CryDapeSVG",
     description: "Mint Your Own NFTs with Auto-Generated SVG Images",
-    image: "/images/projects/cdpMock.png",
+    image: "/images/projects/CdpMock.png",
     tag: ["All", "Web3"],
     gitUrl: "https://github.com/iShinzoo/CryDapeSVG",
     previewUrl: "https://crydapesvgnfts.vercel.app/",
@@ -76,6 +76,15 @@ const projectsData = [
     tag: ["All", "Web3"],
     gitUrl: "https://github.com/iShinzoo/Music-NFT",
     previewUrl: "https://github.com/iShinzoo/Music-NFT",
+  },
+  {
+    id: 9,
+    title: "Buy Me Token",
+    description: "A decentralized platform where supporters can send you tokens as appreciation.",
+    image: "/images/projects/bmtMock.png",
+    tag: ["All", "Web3"],
+    gitUrl: "https://github.com/iShinzoo/BuyMeToken",
+    previewUrl: "https://buy-me-token.vercel.app/",
   }
 ];
 

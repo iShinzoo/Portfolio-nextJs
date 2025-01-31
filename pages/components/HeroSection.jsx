@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   const handleDownloadCV = () => {
-    window.open("https://drive.google.com/uc?export=download&id=1sS_dGZHpSFMzhBBGl6zQKj92inTnS7rA", "_blank");
+    window.open("https://drive.google.com/uc?export=download&id=1scnLV8hzf1xUdkkPDvqV96OUtTZBAuxi", "_blank");
   };
 
   const handleSocialClick = (e) => {
