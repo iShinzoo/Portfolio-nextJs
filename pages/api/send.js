@@ -11,16 +11,12 @@ export default async function handler(req, res) {
     const { email, subject, message } = req.body;
 
     await resend.emails.send({
-      from: 'Your Portfolio <contact@yourverifieddomain.com>', // Verified domain
+      from: `${email} via Portfolio <onboarding@resend.dev>`,
       to: 'work.krsna4@gmail.com',
-      reply_to: email, // User's email will show as "Reply-To"
       subject: subject,
       text: message,
-      headers: {
-        'X-Entity-Ref-ID': uuidv4(), // Helps with tracking
-      },
     });
-    
+
     return res.status(200).json({ success: true });
   } catch (error) {
     return res.status(500).json({ error: error.message });
