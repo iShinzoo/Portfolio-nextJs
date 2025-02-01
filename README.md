@@ -1,40 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Portfolio Website with Next.js
+
+This repository contains the source code for a portfolio website built using Next.js. This README.md file provides an overview of the project and instructions on how to set it up and customize it for your own use.
+
+## Table of Contents
+
+- [Portfolio Website with Next.js](#portfolio-website-with-nextjs)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Screenshots](#screenshots)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+  - [Usage](#usage)
+  - [Customization](#customization)
+    - [Changing Content](#changing-content)
+  - [Deployment](#deployment)
+  - [Contributing](#contributing)
+
+## Features
+
+- Responsive design for various screen sizes.
+- A customizable portfolio section to showcase your projects.
+- An about section to introduce yourself.
+- Easily customizable with Shadcn-ui for styling.
+
+## Screenshots
+
+![Screenshot 1](https://github.com/iShinzoo/Portfolio-nextJs/blob/main/portfolio%20website.png)
 
 ## Getting Started
 
-First, run the development server:
+Follow these instructions to get the project up and running on your local machine.
+
+### Prerequisites
+
+You need to have the following software installed on your computer:
+
+- [Node.js](https://nodejs.org/) (LTS version recommended)
+- [npm](https://www.npmjs.com/), [pnpm](https://pnpm.io/) or [Yarn](https://yarnpkg.com/) package manager
+
+### Installation
+
+1. Star the repository.
+
+2. Clone this repository to your local machine using the following command:
+
+   ```bash
+   git clone https://github.com/nixrajput/portfolio-nextjs.git
+   ```
+
+3. Navigate to the project directory:
+
+   ```bash
+   cd portfolio-nextjs
+   ```
+
+4. Install the project dependencies:
+
+   If you're using npm:
+
+   ```bash
+   npm install
+   ```
+
+   If you're using pnpm:
+
+   ```bash
+   pnpm install
+   ```
+
+   If you're using Yarn:
+
+   ```bash
+   yarn install
+   ```
+
+## Usage
+
+To start the development server and view the website locally, run the following command:
 
 ```bash
 npm run dev
+#or
+pnpm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This will start the Next.js development server, and you can access the website in your web browser at `http://localhost:3000`.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Customization
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+You can customize various aspects of the portfolio website to make it your own.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+### Changing Content
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Update the content in the `pages/components` directory:
 
-## Learn More
+   - Edit the `projectsSection.jsx` file to add or modify project details.
+   - Edit the `skillsSection.jsx` file to add or modify skills you know.
+   - Edit the `EmailSection.jsx` file to add or modify social media links.
+   - Edit the `AboutSection.jsx` file to add or modify personal details.
 
-To learn more about Next.js, take a look at the following resources:
+2. Replace or add images in the `public/images/projects` directory to match your projects and profile picture.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To deploy the portfolio website to a hosting service of your choice, follow the deployment instructions for Next.js applications. Some popular hosting options include Vercel, Netlify, and GitHub Pages.
 
-## Deploy on Vercel
+Remember to configure environment variables for sensitive information like email credentials if needed.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+If you would like to contribute to this project, feel free to fork the repository, make your changes, and submit a pull request.
