@@ -38,7 +38,7 @@ const EmailSection = () => {
 
   return (
     <section
-      className="min-h-screen bg-black text-white py-20 relative overflow-hidden"
+      className="min-h-screen text-white py-20 relative overflow-hidden"
       id="contact"
     >
       <div className="max-w-6xl mx-auto px-4">
@@ -149,7 +149,7 @@ const EmailSection = () => {
                 </div>
                 <button
                   type="submit"
-                  className="bg-purple-600 hover:bg-purple-700 text-white font-medium py-2.5 px-5 rounded-lg w-full"
+                  className="bg-gradient-to-r from-purple-600/80 to-purple-400/80 hover:bg-purple-700 text-white font-medium py-2.5 px-5 rounded-lg w-full"
                 >
                   Send Message
                 </button>

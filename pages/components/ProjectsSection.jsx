@@ -104,7 +104,7 @@ const ProjectsSection = () => {
   }
 
   return (
-    <section className="min-h-screen bg-black text-white py-20 relative overflow-hidden" id="projects">
+    <section className="min-h-screen text-white py-20 relative overflow-hidden" id="projects">
       <div className="max-w-6xl mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}

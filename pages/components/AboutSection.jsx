@@ -22,7 +22,7 @@ const AboutSection = () => {
   const [activeTab, setActiveTab] = useState("education");
 
   return (
-    <section className="min-h-screen bg-black text-white py-20 relative overflow-hidden" id="about">
+    <section className="min-h-screen text-white py-20 relative overflow-hidden" id="about">
       <div className="max-w-6xl mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
@@ -51,7 +51,7 @@ const AboutSection = () => {
               onClick={() => setActiveTab(tab.id)}
               className={`flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
                 activeTab === tab.id
-                  ? "bg-purple-600 text-white"
+                  ? "bg-gradient-to-r from-purple-600/80 to-purple-400/80 text-white"
                   : "bg-gray-800 text-gray-400 hover:bg-gray-700"
               }`}
             >
