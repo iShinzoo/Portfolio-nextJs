@@ -13,6 +13,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Button } from "@/components/ui/button"
 import CustomCursor from "@/components/custom-cursor"
 import "./globals.css"
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -138,7 +139,9 @@ export default function RootLayout({
             )}
           </AnimatePresence>
 
-          <main>{children}</main>
+          <main>{children}
+            <Analytics/>
+          </main>
 
           <footer className="py-8 border-t">
             <div className="container mx-auto px-4">
