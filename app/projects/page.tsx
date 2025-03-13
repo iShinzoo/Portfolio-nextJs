@@ -235,7 +235,7 @@ const allProjects: Project[] = [
     slug: "trip-drop",
     description:
       "A peer-to-peer delivery platform empowering users to outsource deliveries and earn income, enhancing community-based logistics.",
-    image: "/tripMock.png",
+    image: "/tripmock.png",
     technologies: ["Kotlin", "Jetpack Compose", "Firebase", "MVVM", "Hilt", "Coroutines"],
     liveUrl: "",
     githubUrl: "https://github.com/iShinzoo/TripDrop",
