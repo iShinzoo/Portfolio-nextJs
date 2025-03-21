@@ -36,7 +36,7 @@ export default function Home() {
       <div className="fixed inset-0 -z-10 overflow-hidden">
         <motion.div
           className="absolute inset-0 bg-gradient-to-b from-black to-slate-950"
-          style={{ y: backgroundY }}
+          style={{ y: backgroundY, zIndex: -1 }}
         />
         <div className="absolute inset-0 opacity-30">
           {Array.from({ length: 20 }).map((_, i) => (
@@ -109,12 +109,12 @@ export default function Home() {
               transition={{ delay: 0.7, duration: 0.8 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Link href="/projects">
+              <Link target="_blank" href="https://drive.google.com/drive/folders/1qyoRmDdeMeYtPzkF8sg4HhLqFOmmvfBi?usp=drive_link">
                 <Button
                   size="lg"
                   className="group rounded-full relative overflow-hidden"
                 >
-                  <span className="relative z-10">View My Projects</span>
+                  <span className="relative z-10">Resume</span>
                   <span className="absolute inset-0 bg-gradient-to-r from-primary to-purple-600 group-hover:opacity-0 transition-opacity duration-300"></span>
                   <span className="absolute inset-0 bg-gradient-to-r from-purple-600 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                   <ArrowRight className="ml-2 h-4 w-4 relative z-10" />
@@ -338,11 +338,6 @@ function FeaturedProjectCard({
               {project.shortDescription}
             </p>
             <div className="flex gap-3">
-              <Link href={`/projects/${project.slug}`}>
-                <Button size="sm" variant="secondary" className="rounded-full">
-                  View Details <ArrowUpRight className="ml-1 h-3 w-3" />
-                </Button>
-              </Link>
               <Link
                 href={project.liveUrl}
                 target="_blank"
@@ -405,7 +400,7 @@ const featuredProjects: FeaturedProject[] = [
       "RainbowKit",
       "Tailwind CSS",
     ],
-    liveUrl: "https://github.com/iShinzoo/Meme-Coin-Launchpad",
+    liveUrl: "https://pumpflawk.vercel.app/",
     githubUrl: "https://github.com/iShinzoo/Meme-Coin-Launchpad",
     category: "web3",
   },
