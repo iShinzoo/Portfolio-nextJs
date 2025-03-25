@@ -138,7 +138,7 @@ export default function Home() {
 
         {/* Social links */}
         <motion.div
-          className="fixed left-8 bottom-0 hidden md:flex flex-col items-center gap-6"
+          className="fixed left-8 bottom-0 hidden md:flex flex-col items-center gap-6 z-[10]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 1 }}
@@ -171,7 +171,7 @@ export default function Home() {
 
         {/* Email link */}
         <motion.div
-          className="fixed right-8 bottom-0 hidden md:flex flex-col items-center gap-6"
+          className="fixed right-8 bottom-0 hidden md:flex flex-col items-center gap-6 z-[10]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 1 }}
@@ -245,7 +245,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-32 relative">
+      <section className="py-20 md:py-32 relative ">
         <div className="container px-4 mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
