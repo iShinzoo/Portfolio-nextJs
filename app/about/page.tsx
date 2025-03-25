@@ -146,10 +146,10 @@ export default function AboutPage() {
           <Tabs defaultValue="web3" className="max-w-4xl mx-auto">
             <TabsList className="grid w-full grid-cols-2 mb-8">
               <TabsTrigger value="web3" className="text-lg">
-                Web3 Technologies
+                Web3
               </TabsTrigger>
               <TabsTrigger value="android" className="text-lg">
-                Android Technologies
+                Android
               </TabsTrigger>
             </TabsList>
 
