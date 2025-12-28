@@ -15,13 +15,14 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Krishna Thakur | Blockchain Developer",
+  title: "Krishna Thakur",
   description:
     "Blockchain developer and CS student passionate about building decentralized applications, smart contracts, and Web3 solutions.",
+  icons: '/images/projects/logo.png',
   keywords: ["blockchain", "developer", "solidity", "web3", "ethereum", "smart contracts", "dapp"],
   authors: [{ name: "Krishna Thakur" }],
   openGraph: {
-    title: "Krishna Thakur | Blockchain Developer",
+    title: "Krishna Thakur",
     description: "Blockchain developer passionate about building decentralized applications.",
     type: "website",
   },
