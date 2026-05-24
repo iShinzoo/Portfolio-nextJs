@@ -47,15 +47,15 @@ function Card({ p }: { p: Project }) {
       >
         {
           /(\.(png|jpe?g|webp|gif|svg))$/i.test(p.icon) || p.icon.startsWith("/") ? (
-          <img
-            src={p.icon}
-            alt={`${p.title} preview`}
-            className="object-cover w-full h-full"
-            style={{ borderRadius: "2px" }}
-          />
-        ) : (
-          p.icon
-        )}
+            <img
+              src={p.icon}
+              alt={`${p.title} preview`}
+              className="object-cover w-full h-full"
+              style={{ borderRadius: "2px" }}
+            />
+          ) : (
+            p.icon
+          )}
       </div>
 
       <h3
@@ -137,7 +137,7 @@ function ProjectsPage() {
   const [filter, setFilter] = useState<(typeof FILTERS)[number]>("All");
 
   const filtered = useMemo(
-    () => (filter === "All" ? projects : projects.filter((p) => p.category === filter)),
+    () => (filter === "All" ? projects : projects.filter((p) => p.category.includes(filter as any))),
     [filter],
   );
 
