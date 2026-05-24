@@ -11,7 +11,7 @@ import appCss from "../styles.css?url";
 import { BottomDock } from "@/components/site/BottomDock";
 import { Footer } from "@/components/site/Footer";
 import { BootScreen } from "@/components/site/BootScreen";
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from '@vercel/analytics/react';
 
 function NotFoundComponent() {
   return (
