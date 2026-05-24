@@ -9,8 +9,8 @@
       "dest": "/dist/client/assets/$1"
     },
     {
-      "src": "^/(.*\\.(js|css|png|jpg|jpeg|svg|ico|txt|json|webmanifest|woff2?|woff|map))$",
-      "dest": "/dist/client/$1"
+      "src": "^/(.*\\.(png|jpg|jpeg|svg|ico|txt|json|webmanifest|woff2?|woff|map))$",
+      "dest": "/public/$1"
     },
     {
       "src": "^/(.*)$",

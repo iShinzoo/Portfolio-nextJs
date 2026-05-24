@@ -1,13 +1,13 @@
-// Vercel deploys this API route after build, so use the generated SSR bundle.
-import server from "../dist/server/server.js";
-
 export default async function handler(req: any, res: any) {
   try {
+    const serverModule = await import("../dist/server/server.js");
+    const server = (serverModule as any).default ?? serverModule;
+
     const method = req.method || "GET";
     const host = req.headers?.host || "example.com";
     const url = `https://${host}${req.url}`;
 
-    let body: Uint8Array | undefined = undefined;
+    let body: BodyInit | undefined = undefined;
     if (method !== "GET" && method !== "HEAD") {
       const chunks: Uint8Array[] = [];
       for await (const chunk of req) {
@@ -15,7 +15,7 @@ export default async function handler(req: any, res: any) {
       }
       if (chunks.length) {
         const merged = Buffer.concat(chunks.map((chunk) => Buffer.from(chunk)));
-        body = new Uint8Array(merged);
+        body = merged as unknown as BodyInit;
       }
     }
 
