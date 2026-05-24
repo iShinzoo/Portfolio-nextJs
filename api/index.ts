@@ -1,5 +1,6 @@
 export default async function handler(req: any, res: any) {
   try {
+    // @ts-ignore
     const serverModule = await import("../dist/server/server.js");
     const server = (serverModule as any).default ?? serverModule;
 
@@ -28,7 +29,7 @@ export default async function handler(req: any, res: any) {
     const response = await server.fetch(request, undefined, undefined);
 
     res.statusCode = response.status;
-    response.headers.forEach((value, key) => {
+    response.headers.forEach((value: string, key: string) => {
       // Avoid Node sending duplicate content-length when piping a Buffer
       if (key.toLowerCase() === "content-length") return;
       res.setHeader(key, value as string);
