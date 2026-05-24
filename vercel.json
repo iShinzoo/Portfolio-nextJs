@@ -2,11 +2,18 @@
   "version": 2,
   "routes": [
     {
-      "src": "/(.*\\.(js|css|png|jpg|jpeg|svg|ico|txt|json|webmanifest|woff2?|woff|map))$",
+      "handle": "filesystem"
+    },
+    {
+      "src": "^/assets/(.*)$",
+      "dest": "/dist/client/assets/$1"
+    },
+    {
+      "src": "^/(.*\\.(js|css|png|jpg|jpeg|svg|ico|txt|json|webmanifest|woff2?|woff|map))$",
       "dest": "/dist/client/$1"
     },
     {
-      "src": "/(.*)",
+      "src": "^/(.*)$",
       "dest": "/api/index.ts"
     }
   ]
