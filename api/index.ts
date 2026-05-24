@@ -6,17 +6,22 @@ export default async function handler(req: any, res: any) {
     const host = req.headers?.host || "example.com";
     const url = `https://${host}${req.url}`;
 
-    let body: Buffer | undefined = undefined;
+    let body: Uint8Array | undefined = undefined;
     if (method !== "GET" && method !== "HEAD") {
       const chunks: Uint8Array[] = [];
-      for await (const chunk of req) chunks.push(Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk));
-      if (chunks.length) body = Buffer.concat(chunks);
+      for await (const chunk of req) {
+        chunks.push(Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk));
+      }
+      if (chunks.length) {
+        const merged = Buffer.concat(chunks.map((chunk) => Buffer.from(chunk)));
+        body = new Uint8Array(merged);
+      }
     }
 
     const request = new Request(url, {
       method,
       headers: req.headers as HeadersInit,
-      body: body,
+      body,
     });
 
     const response = await server.fetch(request, undefined, undefined);
