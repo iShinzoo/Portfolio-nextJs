@@ -11,6 +11,7 @@ import appCss from "../styles.css?url";
 import { BottomDock } from "@/components/site/BottomDock";
 import { Footer } from "@/components/site/Footer";
 import { BootScreen } from "@/components/site/BootScreen";
+import { Analytics } from '@vercel/analytics/next';
 
 function NotFoundComponent() {
   return (
@@ -132,6 +133,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {children}
+        <Analytics />
         <Scripts />
       </body>
     </html>
