@@ -1,0 +1,356 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@import url("https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap");
+
+@custom-variant dark (&:is(.dark *));
+
+/* ============================================================
+   INDIAN RETRO PORTFOLIO — DESIGN SYSTEM
+   ============================================================ */
+
+:root {
+  --clr-bg: #3D0C0C;
+  --clr-bg-deep: #2A0808;
+  --clr-bg-darker: #1E0606;
+  --clr-surface: #5C1A1A;
+  --clr-surface-2: #7A2929;
+  --clr-paper: #F0E6C4;
+  --clr-paper-shadow: #d9cba0;
+  --clr-gold: #F5C842;
+  --clr-marigold: #E8961E;
+  --clr-vermillion: #C0392B;
+  --clr-teal: #4A7C74;
+  --clr-text: #E8D5A3;
+  --clr-muted: #C8A97E;
+  --clr-border: #7A2929;
+
+  --font-display: "Tiro Devanagari Hindi", Georgia, serif;
+  --font-body: "Syne", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --radius: 6px;
+
+  /* shadcn token mapping (kept so shadcn primitives still resolve) */
+  --background: oklch(0.22 0.08 30);
+  --foreground: oklch(0.88 0.07 80);
+  --card: oklch(0.28 0.09 30);
+  --card-foreground: oklch(0.88 0.07 80);
+  --popover: oklch(0.28 0.09 30);
+  --popover-foreground: oklch(0.88 0.07 80);
+  --primary: oklch(0.62 0.18 50);
+  --primary-foreground: oklch(0.95 0.05 90);
+  --secondary: oklch(0.35 0.1 30);
+  --secondary-foreground: oklch(0.88 0.07 80);
+  --muted: oklch(0.35 0.08 30);
+  --muted-foreground: oklch(0.75 0.07 70);
+  --accent: oklch(0.62 0.18 50);
+  --accent-foreground: oklch(0.95 0.05 90);
+  --destructive: oklch(0.55 0.22 27);
+  --destructive-foreground: oklch(0.95 0.05 90);
+  --border: oklch(0.35 0.1 30);
+  --input: oklch(0.35 0.1 30);
+  --ring: oklch(0.7 0.16 70);
+}
+
+@theme inline {
+  --color-background: var(--clr-bg);
+  --color-foreground: var(--clr-text);
+  --color-card: var(--clr-surface);
+  --color-card-foreground: var(--clr-text);
+  --color-popover: var(--clr-surface);
+  --color-popover-foreground: var(--clr-text);
+  --color-primary: var(--clr-vermillion);
+  --color-primary-foreground: var(--clr-paper);
+  --color-secondary: var(--clr-surface);
+  --color-secondary-foreground: var(--clr-text);
+  --color-muted: var(--clr-surface);
+  --color-muted-foreground: var(--clr-muted);
+  --color-accent: var(--clr-marigold);
+  --color-accent-foreground: var(--clr-bg);
+  --color-destructive: var(--clr-vermillion);
+  --color-destructive-foreground: var(--clr-paper);
+  --color-border: var(--clr-border);
+  --color-input: var(--clr-border);
+  --color-ring: var(--clr-marigold);
+
+  --color-paper: var(--clr-paper);
+  --color-gold: var(--clr-gold);
+  --color-marigold: var(--clr-marigold);
+  --color-vermillion: var(--clr-vermillion);
+  --color-teal: var(--clr-teal);
+  --color-ink: var(--clr-bg);
+  --color-chai: var(--clr-muted);
+  --color-surface2: var(--clr-surface-2);
+
+  --font-sans: "Syne", system-ui, sans-serif;
+  --font-display: "Tiro Devanagari Hindi", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --radius-sm: 3px;
+  --radius-md: 5px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+}
+
+/* ============================================================
+   GLOBAL TEXTURE LAYERS — aged letterpress / Indian poster feel
+   ============================================================ */
+
+html {
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+  font-family: var(--font-body);
+  scroll-behavior: smooth;
+}
+
+html::before {
+  /* Layer A — noise grain (SVG turbulence) */
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='280' height='280'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.95  0 0 0 0 0.82  0 0 0 0 0.55  0 0 0 0.6 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  opacity: 0.09;
+  mix-blend-mode: overlay;
+}
+
+html::after {
+  /* Layer B — horizontal press lines */
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    rgba(255, 255, 255, 0.018) 1px,
+    transparent 2px
+  );
+  background-size: 100% 3px;
+  mix-blend-mode: overlay;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+  font-family: var(--font-body);
+  font-feature-settings: "ss01", "ss02";
+}
+
+body::before {
+  /* Layer C — diagonal screen-print hatch */
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    135deg,
+    rgba(200, 140, 60, 0.03) 0px,
+    transparent 1px,
+    transparent 7px,
+    rgba(200, 140, 60, 0.03) 8px
+  );
+}
+
+body::after {
+  /* Layer D — vignette */
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    transparent 35%,
+    rgba(15, 3, 3, 0.7) 100%
+  );
+}
+
+/* Make sure app content sits above the fixed texture layers */
+#root, main, .layer-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--clr-gold);
+  letter-spacing: 0.005em;
+  line-height: 1.05;
+}
+
+::selection {
+  background: var(--clr-marigold);
+  color: var(--clr-bg);
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--clr-bg-deep); }
+::-webkit-scrollbar-thumb { background: var(--clr-vermillion); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--clr-marigold); }
+
+*:focus-visible {
+  outline: 2px solid var(--clr-marigold);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ============================================================
+   UTILITY DECORATIONS
+   ============================================================ */
+
+/* Paint-chip layered title shadow */
+.paint-chip {
+  text-shadow:
+    2px 2px 0 #2a0707,
+    4px 4px 0 rgba(0, 0, 0, 0.35);
+}
+
+/* Stamp perforation border using radial-gradients on 4 edges */
+.stamp-edge {
+  --c: var(--clr-bg);
+  padding: 14px;
+  background:
+    radial-gradient(circle 5px at 5px 5px, transparent 4px, var(--clr-paper) 4.5px) 0 0 / 12px 12px;
+  -webkit-mask:
+    radial-gradient(circle 5px at 5px 5px, transparent 4px, #000 4.5px) 0 0 / 12px 12px;
+}
+
+/* Postage stamp – clean perforation via mask */
+.stamp {
+  background: var(--clr-paper);
+  color: var(--clr-bg);
+  position: relative;
+  --p: 6px;
+  -webkit-mask:
+    radial-gradient(var(--p) at var(--p) var(--p), #0000 98%, #000) calc(-1 * var(--p)) calc(-1 * var(--p));
+  mask:
+    radial-gradient(var(--p) at var(--p) var(--p), #0000 98%, #000) calc(-1 * var(--p)) calc(-1 * var(--p));
+  -webkit-mask-size: calc(2 * var(--p)) calc(2 * var(--p));
+  mask-size: calc(2 * var(--p)) calc(2 * var(--p));
+}
+
+/* Dashed gold border – section accent */
+.gold-rule {
+  height: 1px;
+  background: repeating-linear-gradient(to right, var(--clr-vermillion) 0 8px, transparent 8px 14px);
+}
+
+/* Pichwai border strip — pure CSS SVG */
+.pichwai-strip {
+  height: 24px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 24' fill='none' stroke='%23F5C842' stroke-width='1.2'><path d='M0 12 Q10 2 20 12 Q30 22 40 12 Q50 2 60 12 Q70 22 80 12'/><circle cx='20' cy='12' r='2.5' fill='%23F5C842'/><circle cx='60' cy='12' r='2.5' fill='%23F5C842'/><path d='M40 12 l-3 -6 l3 -2 l3 2 z' fill='%23E8961E'/></svg>");
+  background-repeat: repeat-x;
+  background-size: 80px 24px;
+  opacity: 0.9;
+}
+
+/* Push pin */
+.push-pin {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ff7a6a 0%, var(--clr-vermillion) 55%, #6a1a14 100%);
+  box-shadow:
+    0 2px 3px rgba(0, 0, 0, 0.6),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.4);
+}
+
+/* Cork-board texture */
+.cork {
+  background-color: var(--clr-bg);
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(196, 136, 79, 0.22) 1px, transparent 1.5px),
+    radial-gradient(circle at 3px 3px, rgba(160, 102, 60, 0.18) 0.8px, transparent 1.2px);
+  background-size: 5px 5px, 7px 7px;
+}
+
+/* Blinking dot — available indicator */
+.dot-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #5cd97a;
+  box-shadow: 0 0 0 0 rgba(92, 217, 122, 0.7);
+  animation: dotPulse 1.8s infinite;
+}
+@keyframes dotPulse {
+  70% { box-shadow: 0 0 0 8px rgba(92, 217, 122, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(92, 217, 122, 0); }
+}
+
+/* Typewriter caret */
+.caret {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: var(--clr-marigold);
+  margin-left: 4px;
+  vertical-align: -2px;
+  animation: blink 1s steps(1) infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+/* Marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: inline-flex;
+  gap: 3rem;
+  animation: marquee 32s linear infinite;
+  white-space: nowrap;
+}
+
+/* Stamp ink press */
+@keyframes inkPress {
+  0% { transform: scale(1.6) rotate(-10deg); opacity: 0; }
+  60% { transform: scale(0.95) rotate(2deg); opacity: 0.8; }
+  100% { transform: scale(1) rotate(0); opacity: 0.7; }
+}
+
+/* Section entrance */
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.rise-in { animation: riseIn 600ms cubic-bezier(0.2, 0.7, 0.3, 1) both; }
+
+/* Tilt utilities for pinned cards */
+.pin-tilt:nth-child(4n+1) { transform: rotate(-1.8deg); }
+.pin-tilt:nth-child(4n+2) { transform: rotate(1.4deg); }
+.pin-tilt:nth-child(4n+3) { transform: rotate(-0.8deg); }
+.pin-tilt:nth-child(4n)   { transform: rotate(2.2deg); }
+.pin-tilt { transition: transform 240ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 240ms; }
+.pin-tilt:hover { transform: rotate(0deg) scale(1.025); box-shadow: 0 16px 36px rgba(20, 4, 4, 0.7); }
+
+/* Boot screen scanline wipe */
+@keyframes scanWipe {
+  from { transform: translateY(0); }
+  to { transform: translateY(120vh); }
+}
+
+/* Loading mail slot */
+@keyframes slotOpen {
+  0%, 35% { transform: scaleY(1); }
+  60%, 100% { transform: scaleY(0); }
+}
+
+@layer base {
+  * { border-color: var(--clr-border); }
+  body { background-color: var(--clr-bg); color: var(--clr-text); }
+  a { color: var(--clr-marigold); }
+  a:hover { color: var(--clr-gold); }
+}
