@@ -1,4 +1,5 @@
-import server from "../src/server";
+// Vercel deploys this API route after build, so use the generated SSR bundle.
+import server from "../dist/server/server.js";
 
 export default async function handler(req: any, res: any) {
   try {
