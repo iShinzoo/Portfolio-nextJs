@@ -110,9 +110,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content: "Visual storyteller, product thinker, interface architect — handcrafted in India.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: "/your-image.png" },
+      { property: "og:image", content: "/port.ico" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: "/your-image.png" },
+      { name: "twitter:image", content: "/port.ico" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
