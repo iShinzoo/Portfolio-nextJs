@@ -20,11 +20,11 @@ export const projects: Project[] = [
     description: "Distributed order processing with live WebSocket status streaming across containerized services.",
     category: ["Backend"],
     year: "2025",
-    role: "Product & Interface Design",
+    role: "Backend Developer",
     duration: "8 weeks",
-    tags: ["Dashboard", "Realtime", "B2B"],
+    tags: ["Golang", "Gin", "Postgres", "WebSockets"],
     icon: "OS",
-    liveUrl: "https://krishna-thakur.app",
+    liveUrl: null,
     githubUrl: "https://github.com/iShinzoo/orderSystem",
     featured: true,
   },
@@ -225,5 +225,33 @@ export const projects: Project[] = [
     liveUrl: null,
     githubUrl: "https://github.com/iShinzoo/finance-backend",
     category: ["Backend"]
+  },
+
+  {
+    slug: "Code Track",
+    title: "Code Track",
+    description: "Track your progress of coding profiles like GitHub, LeetCode, HackerRank",
+    year: "2025",
+    role: "Vibe Coder",
+    duration: "1 Month",
+    tags: ["Vibe Coding"],
+    icon: "CT",
+    liveUrl: "https://code-track-gamma.vercel.app",
+    githubUrl: "https://github.com/iShinzoo/Code-Track",
+    category: ["Vibe Code"]
+  },
+
+  {
+    slug: "Limit Order",
+    title: "Limit Order",
+    description: "A application for creating and managing limit orders using the 1inch Orderbook API on Polygon Mainnet.",
+    year: "2025",
+    role: "Vibe Coder",
+    duration: "1 Month",
+    tags: ["Blockchain", "Web", "Vibe Code"],
+    icon: "LO",
+    liveUrl: "https://limit-order-six.vercel.app/",
+    githubUrl: "https://github.com/iShinzoo/LimitOrder",
+    category: ["Vibe Code"]
   },
 ];

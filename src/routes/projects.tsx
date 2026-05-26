@@ -16,7 +16,7 @@ export const Route = createFileRoute("/projects")({
   component: ProjectsPage,
 });
 
-const FILTERS = ["All", "UI/UX", "Web", "Mobile", "Branding", "Research"] as const;
+const FILTERS = ["All", "UI/UX", "Web", "Mobile", "Backend", "Vibe Code"] as const;
 
 function Card({ p }: { p: Project }) {
   const noLive = !p.liveUrl;
