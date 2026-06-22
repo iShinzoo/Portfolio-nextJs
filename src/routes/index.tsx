@@ -16,12 +16,12 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Visual storyteller and UI/UX designer from Madhya Pradesh, India. Crafting interfaces with chai and pixels since 2022.",
+          "Visual storyteller and developer from Madhya Pradesh, India. Crafting interfaces with chai and pixels since 2022.",
       },
-      { property: "og:title", content: "Krishna Thakur | UI/UX Designer" },
+      { property: "og:title", content: "Krishna Thakur" },
       {
         property: "og:description",
-        content: "Visual storyteller and UI/UX designer from Madhya Pradesh, India.",
+        content: "Visual storyteller and developer from Madhya Pradesh, India.",
       },
     ],
   }),

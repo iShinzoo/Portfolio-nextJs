@@ -5,7 +5,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About | Krishna Thakur" },
-      { name: "description", content: "About Krishna Thakur — a UI/UX designer from Madhya Pradesh blending Indian heritage with modern product craft." },
+      { name: "description", content: "About Krishna Thakur" },
       { property: "og:title", content: "About | Krishna Thakur" },
       { property: "og:description", content: "Designer, researcher, and engineer with experience across Web3, mobile, and civic technology." },
     ],
